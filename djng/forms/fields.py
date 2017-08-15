@@ -6,6 +6,7 @@ import mimetypes
 
 from django.conf import settings
 from django.contrib.staticfiles.storage import staticfiles_storage
+from django.contrib.auth import forms as auth_forms
 from django.core import signing
 from django.core.exceptions import ImproperlyConfigured, ValidationError
 from django.core.files.storage import default_storage
@@ -255,6 +256,10 @@ class BooleanField(DefaultFieldMixin, fields.BooleanField):
 
 
 class NullBooleanField(DefaultFieldMixin, fields.NullBooleanField):
+    pass
+
+
+class ReadOnlyPasswordHashField(DefaultFieldMixin, auth_forms.ReadOnlyPasswordHashField):
     pass
 
 
