@@ -263,7 +263,7 @@ class ReadOnlyPasswordHashField(DefaultFieldMixin, auth_forms.ReadOnlyPasswordHa
     pass
 
 
-class TaskChoiceField(DefaultFieldMixin):
+class URLField(DefaultFieldMixin, fields.URLField):
     pass
 
 
@@ -505,7 +505,7 @@ class ImageField(FileFieldMixin, fields.ImageField):
 
     def __init__(self, *args, **kwargs):
         if 'easy_thumbnails' not in settings.INSTALLED_APPS:
-            raise ImproperlyConfigured("'djng.forms.fields.ImageField' requires 'easy-thubnails' to be installed")
+            raise ImproperlyConfigured("'djng.forms.fields.ImageField' requires 'easy-thumbnails' to be installed")
         accept = kwargs.pop('accept', 'image/*')
         fileupload_url = kwargs.pop('fileupload_url', reverse_lazy('fileupload'))
         area_label = kwargs.pop('area_label', _("Drop image here or click to upload"))
