@@ -263,6 +263,10 @@ class ReadOnlyPasswordHashField(DefaultFieldMixin, auth_forms.ReadOnlyPasswordHa
     pass
 
 
+class TaskChoiceField(DefaultFieldMixin):
+    pass
+
+
 class MultipleFieldMixin(DefaultFieldMixin):
     def get_multiple_choices_required(self):
         """
