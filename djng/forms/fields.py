@@ -267,7 +267,7 @@ class URLField(DefaultFieldMixin, fields.URLField):
     pass
 
 
-class GenericIpAddressField(DefaultFieldMixin, fields.GenericIPAddressField):
+class GenericIPAddressField(DefaultFieldMixin, fields.GenericIPAddressField):
     pass
 
 
