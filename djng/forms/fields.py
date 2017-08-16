@@ -267,6 +267,10 @@ class URLField(DefaultFieldMixin, fields.URLField):
     pass
 
 
+class GenericIpAddressField(DefaultFieldMixin, fields.GenericIPAddressField):
+    pass
+
+
 class MultipleFieldMixin(DefaultFieldMixin):
     def get_multiple_choices_required(self):
         """
