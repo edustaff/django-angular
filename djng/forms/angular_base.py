@@ -204,7 +204,7 @@ class NgBoundField(forms.BoundField):
         if DJANGO_VERSION > (1, 10):
             # so that we can refer to the field when building the rendering context
             widget._field = self.field
-            widget.__class__ = type(widget.__class__.__name__, (NgWidgetMixin, widget.__class__), {})
+            widget.__class__ = type(widget.__class__.__name__, (widget.__class__, NgWidgetMixin), {})
         return super(NgBoundField, self).as_widget(widget, attrs, only_initial)
 
     def build_widget_attrs(self, attrs, widget=None):
