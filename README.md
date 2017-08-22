@@ -40,17 +40,20 @@ Please drop me a line, if and where you use this project.
 * Three way data binding to connect AngularJS models with a server side message queue.
 * Perform basic CRUD operations.
 
+## Future Plans
+A next big change to **django-angular** is to add support for Angular2 and/or 4. This will
+require additional development time from my side, so please
+[consider to fund this and other upcoming features using Gratipay](https://gratipay.com/django-angular/).
+
 
 ## Latest Changes
 
-### 1.0.0 (2017-07-23)
+### 1.1 (2017-08-17)
 
-* Adopted for Django's template-based widget rendering, introduced in version 1.11.
-* Drop support for Django 1.7, 1.8 and 1.9.
-* Fixed #270: Exception while rendering form using ``as_ul``.
-* Removed templatetag ``{% csrf_value %}``, since Django offers ab equivalent tag.
-* Fix file input css (remove the border) and add some documentation about common reported errors.
-* Remove support for bower in favor of npm.
+* Instead of adding extra functionality to Django's form fields via inheritance magic, now one must
+  use the corresponding field classes from ``djng.forms.fields`` if its own form class inheritis
+  from ``NgForm`` or ``NgModelForm``.
+* Added support to upload files and images via Ajax.
 
 
 ## License
