@@ -265,7 +265,7 @@ class BaseFieldsModifierMetaclass(type):
                 raise ImportError(msg.format(formfield.__class__.__name__))
 
             # recreate the formfield using our customized field class
-            if hasattr(formfield, 'choices', None):
+            if hasattr(formfield, 'choices'):
                 kwargs.update(choices_form_class=form_class)
             else:
                 kwargs.update(form_class=form_class)
