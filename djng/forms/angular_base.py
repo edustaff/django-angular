@@ -269,8 +269,7 @@ class BaseFieldsModifierMetaclass(type):
             # recreate the formfield using our customized field class
             if hasattr(formfield, 'choices'):
                 kwargs.update(choices_form_class=form_class)
-            else:
-                kwargs.update(form_class=form_class)
+            kwargs.update(form_class=form_class)
             formfield = modelfield.formfield(**kwargs)
         return formfield
 
